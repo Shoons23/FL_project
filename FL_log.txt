@@ -1,0 +1,370 @@
+Note: Environment variable`HF_TOKEN` is set and is the current active token independently from the token you've just configured.
+Training epoch 0 ...
+Training epoch 1 ...
+Training epoch 2 ...
+loss = 12.595962921524915
+accuracy = 0.9874
+INFO :      Starting Flower ServerApp, config: num_rounds=10, no round_timeout
+INFO :      
+INFO :      [INIT]
+INFO :      Using initial global parameters provided by strategy
+INFO :      Starting evaluation of initial global parameters
+INFO :      Evaluation returned no results (`None`)
+INFO :      
+INFO :      [ROUND 1]
+INFO :      configure_fit: strategy sampled 20 clients (out of 100)
+INFO :      aggregate_fit: received 20 results and 0 failures
+WARNING :   No fit_metrics_aggregation_fn provided
+INFO :      configure_evaluate: strategy sampled 50 clients (out of 100)
+INFO :      aggregate_evaluate: received 50 results and 0 failures
+INFO :      
+INFO :      [ROUND 2]
+INFO :      configure_fit: strategy sampled 20 clients (out of 100)
+INFO :      aggregate_fit: received 20 results and 0 failures
+INFO :      configure_evaluate: strategy sampled 50 clients (out of 100)
+INFO :      aggregate_evaluate: received 50 results and 0 failures
+INFO :      
+INFO :      [ROUND 3]
+INFO :      configure_fit: strategy sampled 20 clients (out of 100)
+INFO :      aggregate_fit: received 20 results and 0 failures
+INFO :      configure_evaluate: strategy sampled 50 clients (out of 100)
+INFO :      aggregate_evaluate: received 50 results and 0 failures
+INFO :      
+INFO :      [ROUND 4]
+INFO :      configure_fit: strategy sampled 20 clients (out of 100)
+INFO :      aggregate_fit: received 20 results and 0 failures
+INFO :      configure_evaluate: strategy sampled 50 clients (out of 100)
+INFO :      aggregate_evaluate: received 50 results and 0 failures
+INFO :      
+INFO :      [ROUND 5]
+INFO :      configure_fit: strategy sampled 20 clients (out of 100)
+INFO :      aggregate_fit: received 20 results and 0 failures
+INFO :      configure_evaluate: strategy sampled 50 clients (out of 100)
+INFO :      aggregate_evaluate: received 50 results and 0 failures
+INFO :      
+INFO :      [ROUND 6]
+INFO :      configure_fit: strategy sampled 20 clients (out of 100)
+INFO :      aggregate_fit: received 20 results and 0 failures
+INFO :      configure_evaluate: strategy sampled 50 clients (out of 100)
+INFO :      aggregate_evaluate: received 50 results and 0 failures
+INFO :      
+INFO :      [ROUND 7]
+INFO :      configure_fit: strategy sampled 20 clients (out of 100)
+INFO :      aggregate_fit: received 20 results and 0 failures
+INFO :      configure_evaluate: strategy sampled 50 clients (out of 100)
+INFO :      aggregate_evaluate: received 50 results and 0 failures
+INFO :      
+INFO :      [ROUND 8]
+INFO :      configure_fit: strategy sampled 20 clients (out of 100)
+INFO :      aggregate_fit: received 20 results and 0 failures
+INFO :      configure_evaluate: strategy sampled 50 clients (out of 100)
+ERROR :     An exception was raised when processing a message by RayBackend
+ERROR :     ray::ClientAppActor.run() (pid=22336, ip=127.0.0.1, actor_id=a5df150ac6ba55ab2e25a80a01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001B500CB4BE0>)
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\urllib3\connection.py", line 516, in getresponse
+    httplib_response = super().getresponse()
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\http\client.py", line 1375, in getresponse
+    response.begin()
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\http\client.py", line 318, in begin
+    version, status, reason = self._read_status()
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\http\client.py", line 279, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\socket.py", line 717, in readinto
+    return self._sock.recv_into(b)
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\ssl.py", line 1307, in recv_into
+    return self.read(nbytes, buffer)
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\ssl.py", line 1163, in read
+    return self._sslobj.read(len, buffer)
+TimeoutError: The read operation timed out
+
+The above exception was the direct cause of the following exception:
+
+ray::ClientAppActor.run() (pid=22336, ip=127.0.0.1, actor_id=a5df150ac6ba55ab2e25a80a01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001B500CB4BE0>)
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\requests\adapters.py", line 667, in send     
+    resp = conn.urlopen(
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\urllib3\util\retry.py", line 474, in increment
+    raise reraise(type(error), error, _stacktrace)
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\urllib3\util\util.py", line 39, in reraise   
+    raise value
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\urllib3\connectionpool.py", line 536, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\urllib3\connectionpool.py", line 367, in _raise_timeout
+    raise ReadTimeoutError(
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='huggingface.co', port=443): Read timed out. (read timeout=10)
+
+During handling of the above exception, another exception occurred:
+
+ray::ClientAppActor.run() (pid=22336, ip=127.0.0.1, actor_id=a5df150ac6ba55ab2e25a80a01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001B500CB4BE0>)
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 58, in run
+    out_message = app(message=message, context=context)
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\flwr\client\client_app.py", line 126, in ffn 
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\flwr\client\message_handler\message_handler.py", line 96, in handle_legacy_message_from_msgtype
+    client = client_fn(context)
+  File "C:\Users\jaeho\Documents\GitHub\FL_project\fl_test.py", line 174, in client_fn
+    partition = fds.load_partition(partition_id, "train")
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\flwr_datasets\federated_dataset.py", line 177, in load_partition
+    self._prepare_dataset()
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\flwr_datasets\federated_dataset.py", line 314, in _prepare_dataset
+    self._dataset = datasets.load_dataset(
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\datasets\load.py", line 2132, in load_dataset
+    builder_instance = load_dataset_builder(
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\datasets\load.py", line 1890, in load_dataset_builder
+    builder_instance: DatasetBuilder = builder_cls(
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\datasets\builder.py", line 342, in __init__  
+    self.config, self.config_id = self._create_builder_config(
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\datasets\builder.py", line 597, in _create_builder_config
+    builder_config._resolve_data_files(
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\datasets\builder.py", line 206, in _resolve_data_files
+    self.data_files = self.data_files.resolve(base_path, download_config)
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\datasets\data_files.py", line 818, in resolve
+    out[key] = data_files_patterns_list.resolve(base_path, download_config)
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\datasets\data_files.py", line 781, in resolve
+    origin_metadata = _get_origin_metadata(data_files, download_config=download_config)
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\datasets\data_files.py", line 548, in _get_origin_metadata
+    return thread_map(
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\tqdm\contrib\concurrent.py", line 69, in thread_map
+    return _executor_map(ThreadPoolExecutor, fn, *iterables, **tqdm_kwargs)
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\tqdm\contrib\concurrent.py", line 51, in _executor_map
+    return list(tqdm_class(ex.map(fn, *iterables, chunksize=chunksize), **kwargs))
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\tqdm\std.py", line 1169, in __iter__
+    for obj in iterable:
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\concurrent\futures\_base.py", line 621, in result_iterator 
+    yield _result_or_cancel(fs.pop())
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\concurrent\futures\_base.py", line 319, in _result_or_cancel
+    return fut.result(timeout)
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\concurrent\futures\_base.py", line 458, in result
+    return self.__get_result()
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\concurrent\futures\_base.py", line 403, in __get_result    
+    raise self._exception
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\datasets\data_files.py", line 527, in _get_single_origin_metadata
+    resolved_path = fs.resolve_path(data_file)
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\huggingface_hub\hf_file_system.py", line 198, in resolve_path
+    repo_and_revision_exist, err = self._repo_and_revision_exist(repo_type, repo_id, revision)
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\huggingface_hub\hf_file_system.py", line 125, in _repo_and_revision_exist
+    self._api.repo_info(
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\huggingface_hub\utils\_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\huggingface_hub\hf_api.py", line 2734, in repo_info
+    return method(
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\huggingface_hub\utils\_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\huggingface_hub\hf_api.py", line 2591, in dataset_info
+    r = get_session().get(path, headers=headers, timeout=timeout, params=params)
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\requests\sessions.py", line 602, in get      
+    return self.request("GET", url, **kwargs)
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\requests\sessions.py", line 589, in request  
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\requests\sessions.py", line 703, in send     
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\huggingface_hub\utils\_http.py", line 96, in send
+    return super().send(request, *args, **kwargs)
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\requests\adapters.py", line 713, in send     
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: (ReadTimeoutError("HTTPSConnectionPool(host='huggingface.co', port=443): Read timed out. (read timeout=10)"), '(Request ID: aae58e86-788d-4c8c-8791-d91fd4ae5745)')
+
+The above exception was the direct cause of the following exception:
+
+ray::ClientAppActor.run() (pid=22336, ip=127.0.0.1, actor_id=a5df150ac6ba55ab2e25a80a01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001B500CB4BE0>)
+  File "python\ray\_raylet.pyx", line 1890, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1991, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1896, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1837, in ray._raylet.execute_task.function_executor
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\ray\_private\function_manager.py", line 691, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 64, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException:
+Exception ClientAppException occurred. Message: (ReadTimeoutError("HTTPSConnectionPool(host='huggingface.co', port=443): Read timed out. (read timeout=10)"), '(Request ID: aae58e86-788d-4c8c-8791-d91fd4ae5745)')
+ERROR :     Traceback (most recent call last):
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\flwr\server\superlink\fleet\vce\vce_api.py", line 112, in worker
+    out_mssg, updated_context = backend.process_message(message, context)
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\flwr\server\superlink\fleet\vce\backend\raybackend.py", line 187, in process_message
+    raise ex
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\flwr\server\superlink\fleet\vce\backend\raybackend.py", line 175, in process_message
+    ) = self.pool.fetch_result_and_return_actor_to_pool(future)
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 478, in fetch_result_and_return_actor_to_pool
+    _, out_mssg, updated_context = ray.get(future)
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\ray\_private\auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\ray\_private\client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\ray\_private\worker.py", line 2639, in get   
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\ray\_private\worker.py", line 864, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ClientAppException): ray::ClientAppActor.run() (pid=22336, ip=127.0.0.1, actor_id=a5df150ac6ba55ab2e25a80a01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001B500CB4BE0>) 
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\urllib3\connection.py", line 516, in getresponse
+    httplib_response = super().getresponse()
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\http\client.py", line 1375, in getresponse
+    response.begin()
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\http\client.py", line 318, in begin
+    version, status, reason = self._read_status()
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\http\client.py", line 279, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\socket.py", line 717, in readinto
+    return self._sock.recv_into(b)
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\ssl.py", line 1307, in recv_into
+    return self.read(nbytes, buffer)
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\ssl.py", line 1163, in read
+    return self._sslobj.read(len, buffer)
+TimeoutError: The read operation timed out
+
+The above exception was the direct cause of the following exception:
+
+ray::ClientAppActor.run() (pid=22336, ip=127.0.0.1, actor_id=a5df150ac6ba55ab2e25a80a01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001B500CB4BE0>)
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\requests\adapters.py", line 667, in send     
+    resp = conn.urlopen(
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\urllib3\util\retry.py", line 474, in increment
+    raise reraise(type(error), error, _stacktrace)
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\urllib3\util\util.py", line 39, in reraise   
+    raise value
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\urllib3\connectionpool.py", line 536, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\urllib3\connectionpool.py", line 367, in _raise_timeout
+    raise ReadTimeoutError(
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='huggingface.co', port=443): Read timed out. (read timeout=10)
+
+During handling of the above exception, another exception occurred:
+
+ray::ClientAppActor.run() (pid=22336, ip=127.0.0.1, actor_id=a5df150ac6ba55ab2e25a80a01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001B500CB4BE0>)
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 58, in run
+    out_message = app(message=message, context=context)
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\flwr\client\client_app.py", line 126, in ffn 
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\flwr\client\message_handler\message_handler.py", line 96, in handle_legacy_message_from_msgtype
+    client = client_fn(context)
+  File "C:\Users\jaeho\Documents\GitHub\FL_project\fl_test.py", line 174, in client_fn
+    partition = fds.load_partition(partition_id, "train")
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\flwr_datasets\federated_dataset.py", line 177, in load_partition
+    self._prepare_dataset()
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\flwr_datasets\federated_dataset.py", line 314, in _prepare_dataset
+    self._dataset = datasets.load_dataset(
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\datasets\load.py", line 2132, in load_dataset
+    builder_instance = load_dataset_builder(
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\datasets\load.py", line 1890, in load_dataset_builder
+    builder_instance: DatasetBuilder = builder_cls(
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\datasets\builder.py", line 342, in __init__  
+    self.config, self.config_id = self._create_builder_config(
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\datasets\builder.py", line 597, in _create_builder_config
+    builder_config._resolve_data_files(
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\datasets\builder.py", line 206, in _resolve_data_files
+    self.data_files = self.data_files.resolve(base_path, download_config)
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\datasets\data_files.py", line 818, in resolve
+    out[key] = data_files_patterns_list.resolve(base_path, download_config)
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\datasets\data_files.py", line 781, in resolve
+    origin_metadata = _get_origin_metadata(data_files, download_config=download_config)
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\datasets\data_files.py", line 548, in _get_origin_metadata
+    return thread_map(
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\tqdm\contrib\concurrent.py", line 69, in thread_map
+    return _executor_map(ThreadPoolExecutor, fn, *iterables, **tqdm_kwargs)
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\tqdm\contrib\concurrent.py", line 51, in _executor_map
+    return list(tqdm_class(ex.map(fn, *iterables, chunksize=chunksize), **kwargs))
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\tqdm\std.py", line 1169, in __iter__
+    for obj in iterable:
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\concurrent\futures\_base.py", line 621, in result_iterator 
+    yield _result_or_cancel(fs.pop())
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\concurrent\futures\_base.py", line 319, in _result_or_cancel
+    return fut.result(timeout)
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\concurrent\futures\_base.py", line 458, in result
+    return self.__get_result()
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\concurrent\futures\_base.py", line 403, in __get_result    
+    raise self._exception
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\datasets\data_files.py", line 527, in _get_single_origin_metadata
+    resolved_path = fs.resolve_path(data_file)
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\huggingface_hub\hf_file_system.py", line 198, in resolve_path
+    repo_and_revision_exist, err = self._repo_and_revision_exist(repo_type, repo_id, revision)
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\huggingface_hub\hf_file_system.py", line 125, in _repo_and_revision_exist
+    self._api.repo_info(
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\huggingface_hub\utils\_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\huggingface_hub\hf_api.py", line 2734, in repo_info
+    return method(
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\huggingface_hub\utils\_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\huggingface_hub\hf_api.py", line 2591, in dataset_info
+    r = get_session().get(path, headers=headers, timeout=timeout, params=params)
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\requests\sessions.py", line 602, in get      
+    return self.request("GET", url, **kwargs)
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\requests\sessions.py", line 589, in request  
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\requests\sessions.py", line 703, in send     
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\huggingface_hub\utils\_http.py", line 96, in send
+    return super().send(request, *args, **kwargs)
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\requests\adapters.py", line 713, in send     
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: (ReadTimeoutError("HTTPSConnectionPool(host='huggingface.co', port=443): Read timed out. (read timeout=10)"), '(Request ID: aae58e86-788d-4c8c-8791-d91fd4ae5745)')
+
+The above exception was the direct cause of the following exception:
+
+ray::ClientAppActor.run() (pid=22336, ip=127.0.0.1, actor_id=a5df150ac6ba55ab2e25a80a01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001B500CB4BE0>)
+  File "python\ray\_raylet.pyx", line 1890, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1991, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1896, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1837, in ray._raylet.execute_task.function_executor
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\ray\_private\function_manager.py", line 691, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\jaeho\Desktop\anaconda3\envs\flwr_env\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 64, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException:
+Exception ClientAppException occurred. Message: (ReadTimeoutError("HTTPSConnectionPool(host='huggingface.co', port=443): Read timed out. (read timeout=10)"), '(Request ID: aae58e86-788d-4c8c-8791-d91fd4ae5745)')
+
+INFO :      aggregate_evaluate: received 49 results and 1 failures
+INFO :      
+INFO :      [ROUND 9]
+INFO :      configure_fit: strategy sampled 20 clients (out of 100)
+INFO :      aggregate_fit: received 20 results and 0 failures
+INFO :      configure_evaluate: strategy sampled 50 clients (out of 100)
+INFO :      aggregate_evaluate: received 50 results and 0 failures
+INFO :      
+INFO :      [ROUND 10]
+INFO :      configure_fit: strategy sampled 20 clients (out of 100)
+INFO :      aggregate_fit: received 20 results and 0 failures
+INFO :      configure_evaluate: strategy sampled 50 clients (out of 100)
+INFO :      aggregate_evaluate: received 50 results and 0 failures
+INFO :      
+INFO :      [SUMMARY]
+INFO :      Run finished 10 round(s) in 384.29s
+INFO :          History (loss, distributed):
+INFO :                  round 1: 4.592524762153626
+INFO :                  round 2: 4.573135356903077
+INFO :                  round 3: 4.528395175933838
+INFO :                  round 4: 4.411805644035339
+INFO :                  round 5: 3.9346837115287783
+INFO :                  round 6: 1.9145469164848328
+INFO :                  round 7: 1.2800284731388092
+INFO :                  round 8: 0.984544402178453
+INFO :                  round 9: 0.8395009207725525
+INFO :                  round 10: 0.7561185368895531
+INFO :          History (metrics, distributed, evaluate):
+INFO :          {'accuracy': [(1, 0.11099999999999993),
+INFO :                        (2, 0.15633333333333335),
+INFO :                        (3, 0.24100000000000002),
+INFO :                        (4, 0.5393333333333334),
+INFO :                        (5, 0.606),
+INFO :                        (6, 0.7613333333333331),
+INFO :                        (7, 0.8106666666666669),
+INFO :                        (8, 0.8568027210884356),
+INFO :                        (9, 0.8689999999999999),
+INFO :                        (10, 0.8856666666666666)]}
+INFO :

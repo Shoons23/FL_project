@@ -1,0 +1,19 @@
+# conda env create -f conda_environment.yaml
+# conda activate flwr_env
+
+name: flwr_env 
+channels:
+  - defaults
+  - conda-forge
+  - pytorch
+dependencies:
+  - python=3.10
+  - pip
+  - pytorch=2.1.0  
+  - torchvision=0.16.0
+  - ipykernel
+  - pip:
+      - flwr[simulation]
+      - flwr-datasets
+      - matplotlib
+      # - python-dotenv
